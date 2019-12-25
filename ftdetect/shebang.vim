@@ -82,9 +82,25 @@ AddShebangPattern! zsh        ^#!.*\s\+zsh\>
 " ruby
 AddShebangPattern! ruby       ^#!.*\s\+ruby\>
 AddShebangPattern! ruby       ^#!.*[s]\?bin/ruby\>
+" lua
+AddShebangPattern! lua       ^#!.*\s\+lua\>
+AddShebangPattern! lua       ^#!.*[s]\?bin/lua\>
+" ion
+AddShebangPattern! ion       ^#!.*\s\+ion\>
+AddShebangPattern! ion       ^#!.*[s]\?bin/ion\>
+" php
+AddShebangPattern! php       ^#!.*\s\+php\>
+AddShebangPattern! php       ^#!.*[s]\?bin/php\>
+" perl
+AddShebangPattern! perl       ^#!.*\s\+perl\>
+AddShebangPattern! perl       ^#!.*[s]\?bin/perl\>
 " python
 AddShebangPattern! python     ^#!.*\s\+python\>
 AddShebangPattern! python     ^#!.*[s]\?bin/python\>
+AddShebangPattern! python     ^#!.*\s\+pypy\>
+AddShebangPattern! python     ^#!.*[s]\?bin/pypy\>
+AddShebangPattern! python     ^#!.*\s\+jython\>
+AddShebangPattern! python     ^#!.*[s]\?bin/jython\>
 " js
 AddShebangPattern! javascript ^#!.*\s\+node\>
 

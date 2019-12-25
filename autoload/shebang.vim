@@ -54,8 +54,20 @@ fun! shebang#unittest() " {{{ all tests
         \ '^#!.*\s\+zsh\>'                                  : 'zsh',
         \ '^#!.*\s\+ruby\>'                                 : 'ruby',
         \ '^#!.*[s]\?bin/ruby'                              : 'ruby',
+        \ '^#!.*\s\+perl\>'                                 : 'perl',
+        \ '^#!.*[s]\?bin/perl'                              : 'perl',
+        \ '^#!.*\s\+php\>'                                  : 'php',
+        \ '^#!.*[s]\?bin/php'                               : 'php',
+        \ '^#!.*\s\+lua\>'                                  : 'lua',
+        \ '^#!.*[s]\?bin/lua'                               : 'lua',
         \ '^#!.*\s\+python\>'                               : 'python',
         \ '^#!.*[s]\?bin/python'                            : 'python',
+        \ '^#!.*\s\+jython\>'                               : 'python',
+        \ '^#!.*[s]\?bin/jython'                            : 'python',
+        \ '^#!.*\s\+pypy\>'                                 : 'python',
+        \ '^#!.*[s]\?bin/pypy'                              : 'python',
+        \ '^#!.*\s\+ion\>'                                  : 'ion',
+        \ '^#!.*[s]\?bin/ion'                               : 'ion',
         \ '^#!.*\s\+node\>'                                 : 'javascript',
         \ }
   " shells
@@ -80,17 +92,51 @@ fun! shebang#unittest() " {{{ all tests
   call s:detect_filetype_test('#!/usr/bin/env mksh'   , patterns , 'sh')
   call s:detect_filetype_test('#!/usr/bin/env bash'   , patterns , 'sh')
   " python
-  call s:detect_filetype_test('#!/usr/bin/env python' , patterns , 'python')
-  call s:detect_filetype_test('#!/usr/sbin/python'    , patterns , 'python')
-  call s:detect_filetype_test('#!/usr/bin/python'     , patterns , 'python')
-  call s:detect_filetype_test('#!/sbin/python'        , patterns , 'python')
-  call s:detect_filetype_test('#!/bin/python'         , patterns , 'python')
+  call s:detect_filetype_test('#!/usr/bin/env jython'  , patterns , 'python')
+  call s:detect_filetype_test('#!/usr/bin/env pypy3'   , patterns , 'python')
+  call s:detect_filetype_test('#!/usr/bin/env pypy'    , patterns , 'python')
+  call s:detect_filetype_test('#!/usr/bin/env python3' , patterns , 'python')
+  call s:detect_filetype_test('#!/usr/bin/env python2' , patterns , 'python')
+  call s:detect_filetype_test('#!/usr/bin/env python'  , patterns , 'python')
+  call s:detect_filetype_test('#!/usr/bin/python3'     , patterns , 'python')
+  call s:detect_filetype_test('#!/usr/bin/pypy3'       , patterns , 'python')
+  call s:detect_filetype_test('#!/usr/bin/pypy'        , patterns , 'python')
+  call s:detect_filetype_test('#!/usr/bin/python3'     , patterns , 'python')
+  call s:detect_filetype_test('#!/usr/bin/python2'     , patterns , 'python')
+  call s:detect_filetype_test('#!/usr/sbin/python'     , patterns , 'python')
+  call s:detect_filetype_test('#!/usr/bin/python'      , patterns , 'python')
+  call s:detect_filetype_test('#!/sbin/python'         , patterns , 'python')
+  call s:detect_filetype_test('#!/bin/python'          , patterns , 'python')
   " ruby
   call s:detect_filetype_test('#!/usr/bin/env ruby'   , patterns , 'ruby')
   call s:detect_filetype_test('#!/usr/sbin/ruby'      , patterns , 'ruby')
   call s:detect_filetype_test('#!/usr/bin/ruby'       , patterns , 'ruby')
   call s:detect_filetype_test('#!/sbin/ruby'          , patterns , 'ruby')
   call s:detect_filetype_test('#!/bin/ruby'           , patterns , 'ruby')
+  " php
+  call s:detect_filetype_test('#!/usr/bin/env php'   , patterns , 'php')
+  call s:detect_filetype_test('#!/usr/sbin/php'      , patterns , 'php')
+  call s:detect_filetype_test('#!/usr/bin/php'       , patterns , 'php')
+  call s:detect_filetype_test('#!/sbin/php'          , patterns , 'php')
+  call s:detect_filetype_test('#!/bin/php'           , patterns , 'php')
+  " perl
+  call s:detect_filetype_test('#!/usr/bin/env perl'   , patterns , 'perl')
+  call s:detect_filetype_test('#!/usr/sbin/perl'      , patterns , 'perl')
+  call s:detect_filetype_test('#!/usr/bin/perl'       , patterns , 'perl')
+  call s:detect_filetype_test('#!/sbin/perl'          , patterns , 'perl')
+  call s:detect_filetype_test('#!/bin/perl'           , patterns , 'perl')
+  " ion
+  call s:detect_filetype_test('#!/usr/bin/env ion'    , patterns , 'ion')
+  call s:detect_filetype_test('#!/usr/sbin/ion'       , patterns , 'ion')
+  call s:detect_filetype_test('#!/usr/bin/ion'        , patterns , 'ion')
+  call s:detect_filetype_test('#!/sbin/ion'           , patterns , 'ion')
+  call s:detect_filetype_test('#!/bin/ion'            , patterns , 'ion')
+  " lua
+  call s:detect_filetype_test('#!/usr/bin/env lua'    , patterns , 'lua')
+  call s:detect_filetype_test('#!/usr/sbin/lua'       , patterns , 'lua')
+  call s:detect_filetype_test('#!/usr/bin/lua'        , patterns , 'lua')
+  call s:detect_filetype_test('#!/sbin/lua'           , patterns , 'lua')
+  call s:detect_filetype_test('#!/bin/lua'            , patterns , 'lua')
   " javascript
   call s:detect_filetype_test('#!/usr/bin/env node'   , patterns , 'javascript')
 endf " }}}
