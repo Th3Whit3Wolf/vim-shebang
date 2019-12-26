@@ -74,36 +74,44 @@ endf " }}}
 " /usr/bin/interpreter
 " /bin/env interpreter
 " /usr/bin/env interpreter
-" support most of shells: bash, sh, zsh, csh, ash, dash, ksh, pdksh, mksh, tcsh
-AddShebangPattern! sh         ^#!.*[s]\?bin/sh\>    let\ b:is_sh=1|if\ exists('b:is_bash')|unlet\ b:is_bash|endif
-AddShebangPattern! sh         ^#!.*[s]\?bin/bash\>  let\ b:is_bash=1|if\ exists('b:is_sh')|unlet\ b:is_sh|endif
-AddShebangPattern! sh         ^#!.*\s\+\(ba\|c\|a\|da\|k\|pdk\|mk\|tc\)\?sh\>
-AddShebangPattern! zsh        ^#!.*\s\+zsh\>
-" ruby
-AddShebangPattern! ruby       ^#!.*\s\+ruby\>
-AddShebangPattern! ruby       ^#!.*[s]\?bin/ruby\>
-" lua
-AddShebangPattern! lua       ^#!.*\s\+lua\>
-AddShebangPattern! lua       ^#!.*[s]\?bin/lua\>
-" ion
-AddShebangPattern! ion       ^#!.*\s\+ion\>
-AddShebangPattern! ion       ^#!.*[s]\?bin/ion\>
-" php
-AddShebangPattern! php       ^#!.*\s\+php\>
-AddShebangPattern! php       ^#!.*[s]\?bin/php\>
-" perl
-AddShebangPattern! perl       ^#!.*\s\+perl\>
-AddShebangPattern! perl       ^#!.*[s]\?bin/perl\>
-" python
-AddShebangPattern! python     ^#!.*\s\+python\>
-AddShebangPattern! python     ^#!.*[s]\?bin/python\>
-AddShebangPattern! python     ^#!.*\s\+pypy\>
-AddShebangPattern! python     ^#!.*[s]\?bin/pypy\>
-AddShebangPattern! python     ^#!.*\s\+jython\>
-AddShebangPattern! python     ^#!.*[s]\?bin/jython\>
+" applescript
+AddShebangPattern! applescript    ^#!.*\s\+osascript\>
+AddShebangPattern! applescript    ^#!.*[s]\?bin/osascript\>
+" escript
+AddShebangPattern! erlang         ^#!.*\s\+escript\>
+AddShebangPattern! erlang         ^#!.*[s]\?bin/escript\>
+" fish
+AddShebangPattern! fish           ^#!.*\s\+fish\>
+AddShebangPattern! fish           ^#!.*[s]\?bin/fish\>
 " js
-AddShebangPattern! javascript ^#!.*\s\+node\>
-
+AddShebangPattern! javascript     ^#!.*\s\+node\>
+" ion
+AddShebangPattern! ion            ^#!.*\s\+ion\>
+AddShebangPattern! ion            ^#!.*[s]\?bin/ion\>
+" lua
+AddShebangPattern! lua            ^#!.*\s\+lua\>
+AddShebangPattern! lua            ^#!.*[s]\?bin/lua\>
+" perl
+AddShebangPattern! perl           ^#!.*\s\+perl\>
+AddShebangPattern! perl           ^#!.*[s]\?bin/perl\>
+" php
+AddShebangPattern! php           ^#!.*\s\+php\>
+AddShebangPattern! php           ^#!.*[s]\?bin/php\>
+" python
+AddShebangPattern! python        ^#!.*\s\+python\>
+AddShebangPattern! python        ^#!.*[s]\?bin/python\>
+AddShebangPattern! python        ^#!.*\s\+pypy\>
+AddShebangPattern! python        ^#!.*[s]\?bin/pypy\>
+AddShebangPattern! python        ^#!.*\s\+jython\>
+AddShebangPattern! python        ^#!.*[s]\?bin/jython\>
+" ruby
+AddShebangPattern! ruby          ^#!.*\s\+ruby\>
+AddShebangPattern! ruby          ^#!.*[s]\?bin/ruby\>
+" support most of shells: bash, sh, zsh, csh, ash, dash, ksh, pdksh, mksh, tcsh
+AddShebangPattern! sh            ^#!.*[s]\?bin/sh\>    let\ b:is_sh=1|if\ exists('b:is_bash')|unlet\ b:is_bash|endif
+AddShebangPattern! sh            ^#!.*[s]\?bin/bash\>  let\ b:is_bash=1|if\ exists('b:is_sh')|unlet\ b:is_sh|endif
+AddShebangPattern! sh            ^#!.*\s\+\(ba\|c\|a\|da\|k\|pdk\|mk\|tc\)\?sh\>
+AddShebangPattern! zsh           ^#!.*\s\+zsh\>
 " }}}
 " Key bindings {{{
 
